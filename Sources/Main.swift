@@ -13,8 +13,6 @@ import PySwiftObject
 
 let pythonSwiftImportList: [PySwiftModuleImport] = [
 	//insert PySwiftModule import functions here
-	//.init(name: "corebluebooth", module: )
-	.init(name: "corebluetooth", module: PyInit_corebluetooth)
 ]
 
 let extra_pip_folders: [String] = [
