@@ -7,7 +7,7 @@
 
 import Foundation
 //import PythonSwiftCore
-import KivyLauncher
+//import KivyLauncher
 import PySwiftObject
 
 
