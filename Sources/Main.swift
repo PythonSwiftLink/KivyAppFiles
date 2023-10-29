@@ -1,21 +1,14 @@
-//
-//  SDLMain.swift
-//  Ehhh
-//
-//  Created by CodeBuilder on 07/10/2023.
-//
 
 import Foundation
-//import PythonSwiftCore
-//import KivyLauncher
+import KivyLauncher
 import PySwiftObject
 
 
 let pythonSwiftImportList: [PySwiftModuleImport] = [
-	//insert PySwiftModule import functions here
+
 ]
 
-let extra_pip_folders: [String] = [
+let extra_pip_folders: [URL] = [
 	
 ]
 
@@ -27,7 +20,7 @@ func main(_ argc: Int32, _ argv: UnsafeMutablePointer<UnsafeMutablePointer<CChar
 	
 	do {
 		let python = try KivyLauncher(
-			other_paths: extra_pip_folders,
+			site_paths: extra_pip_folders,
 			pyswiftImports: pythonSwiftImportList
 		)
 		
