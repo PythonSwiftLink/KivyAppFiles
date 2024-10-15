@@ -24,7 +24,18 @@ func main(_ argc: Int32, _ argv: UnsafeMutablePointer<UnsafeMutablePointer<CChar
 			pyswiftImports: pythonSwiftImportList
 		)
 		
+		#if DEBUG
+		kivy.KIVY_CONSOLELOG = true
+		#endif
+		
 		//python.prog = PyCoreBluetooth.main_py.path
+		
+		kivy.setup()
+		
+		// overrite env values
+		//kivy.env.KIVY_GL_BACKEND = "sdl2"
+		
+		kivy.start()
 		
 		ret = try python.run_main(argc, argv)
 	} catch let err {
