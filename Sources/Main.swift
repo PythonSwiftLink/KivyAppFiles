@@ -19,7 +19,7 @@ func main(_ argc: Int32, _ argv: UnsafeMutablePointer<UnsafeMutablePointer<CChar
 	var ret: Int32 = 0
 	
 	do {
-		let python = try KivyLauncher(
+		let kivy = try KivyLauncher(
 			site_paths: extra_pip_folders,
 			pyswiftImports: pythonSwiftImportList
 		)
@@ -37,7 +37,7 @@ func main(_ argc: Int32, _ argv: UnsafeMutablePointer<UnsafeMutablePointer<CChar
 		
 		kivy.start()
 		
-		ret = try python.run_main(argc, argv)
+		ret = try kivy.run_main(argc, argv)
 	} catch let err {
 		print(err.localizedDescription)
 	}
