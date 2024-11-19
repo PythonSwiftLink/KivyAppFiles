@@ -20,6 +20,7 @@ func main(_ argc: Int32, _ argv: UnsafeMutablePointer<UnsafeMutablePointer<CChar
 	
 	do {
 		let kivy = try KivyLauncher(
+			site_packages: Bundle.main.url(forResource: "site-packages", withExtension: nil)!,
 			site_paths: extra_pip_folders,
 			pyswiftImports: pythonSwiftImportList
 		)
